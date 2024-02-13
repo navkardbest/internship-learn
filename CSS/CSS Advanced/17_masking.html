@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masking</title>
+    <style>
+        .mask1{
+            -webkit-mask-image: url('/images/natureimg3.jpeg');
+            mask-image: url('/images/natureimg3.jpeg');
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>The mask-image Property</h1>
+    <h3>An image with a mask layer image:</h3>
+    <div class="mask1">
+        <img src="/images/alphabet_x.png" alt="Alphabet X" width="300px" height="300px">
+    </div>
+    <h3>Original Image:</h3>
+    <img src="/images/alphabet_x.png" alt="Nature" width="300px" height="300px">
+</body>
+</html>

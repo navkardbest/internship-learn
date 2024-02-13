@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.test1{
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid black;
+            text-overflow: clip;
+        }
+        p.test2{
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid black;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p.test2:hover{
+            overflow: visible;
+        }
+
+        p.long-word{
+            height: 100px;
+            width: 222px;
+            background-color: blue;
+            color: white;
+            word-break: break-all;
+            /* word-wrap: keep-all; Break at hyphens otherwise new line*/
+            /* word-wrap: break-all;  Break at any character*/ 
+        }
+        p.test3{
+            writing-mode: horizontal-tb;
+        }
+        p.test4{
+            writing-mode: vertical-rl;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>The text overflow property</h1>
+    <p>The following two paragraphs contains a long text that will not fit in the box</p>
+
+    <h2>text-overflow: clip:</h2>
+    <p class="test1">This is some long text that         will not fit in the box</p>
+
+    <h2>text-overflow: ellipsis:</h2>
+    <p class="test2">This is some long text that will not fit in the box</p>
+
+    <p class="long-word">Lorem ipsum dolor sitamet consecteturadipisicing elit. Fugitnamobcaecaeautem iste sit, error reprehenderit ipsam, odio vitae harum eaque veritatis!</p>
+    <p class="test3">Hello</p>
+    <p class="test4">World is good</p>
+</body>
+
+</html>

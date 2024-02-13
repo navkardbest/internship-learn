@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .flex-container {
+            display: flex;
+            align-items: stretch;
+            background-color: #f1f1f1;
+        }
+
+        .flex-container>div {
+            background-color: DodgerBlue;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+        /* Flex Order */
+        /* #div1{order: 3;}
+        #div1{order: 2;}
+        #div1{order: 4;}
+        #div1{order: 1;} */
+
+        /* flex-grow */
+        /* #div1{flex-grow: 1}
+        #div2{flex-grow: 3}
+        #div3{flex-grow: 2}
+        #div4{flex-grow: 1} */
+
+        /* flex-shrink */
+        /* #div1{flex-shrink: 1}
+        #div2{flex-shrink: 3}
+        #div3{flex-shrink: 2}
+        #div4{flex-shrink: 1} */
+
+        /* flex-basis */
+        #div1{flex-basis: 40px}
+        #div2{flex-basis: 60px}
+        #div3{flex-basis: 80px ; align-self: stretch;}
+        #div4{flex-basis: 100px}
+    </style>
+</head>
+
+<body>
+    <!-- <h1>The order property</h1> -->
+    <div class="flex-container">
+        <div id="div1">1</div>
+        <div id="div2">2</div>
+        <div id="div3">3</div>
+        <div id="div4">4</div>
+    </div>
+</body>
+
+</html>

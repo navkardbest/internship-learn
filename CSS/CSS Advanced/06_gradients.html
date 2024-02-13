@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #grad1 {
+        height: 200px;
+        background-color: red;
+        width: 200px;
+        margin-left: 100px;
+
+        /* to top, to right ,to left , to bottom (default)
+        background-image: linear-gradient(to right, yellow, red);
+        /* to top left, to bottom left,to top right , to bottom right */
+        /* background-image: linear-gradient(to bottom right, yellow, red); */
+        /* (angle) --> 0deg = to top , 90deg = to right , 180deg = bottom */
+        /* background-image: linear-gradient(90deg, yellow, red); */
+
+        /*Multiple colours*/
+        /* background-image: linear-gradient(yellow, red, green); */ 
+
+        /*Repeating Linear Gradient*/
+        /* background-image: repeating-linear-gradient(red,yellow 10%,green 20%); */
+
+        /* background-image: radial-gradient(red 5%,yellow 20%,green); */
+
+        /* background-image: radial-gradient(closest-side at 20% 30%, red 5%,yellow 20%,green); */
+        /* background-image: radial-gradient(closest-corner at 20% 30%, red 5%,yellow 20%,green); */
+        /* background-image: radial-gradient(farthest-side at 20% 30%, red 5%,yellow 20%,green);
+        background-image: radial-gradient(farthest-corner at 20% 30%, red 5%,yellow 20%,green); */
+
+        /* background-image: repeating-radial-gradient(red, yellow 10%, green 15%); */
+
+        /* background-image: conic-gradient(red, yellow, green, blue, black); */
+        background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+        border-radius: 50%;
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Linear Gradient - Top to Bottom</h1>
+    <p>
+      This linear gradient starts red at the top, transitioning to yellow at the
+      bottom:
+    </p>
+    <div id="grad1"></div>
+  </body>
+</html>

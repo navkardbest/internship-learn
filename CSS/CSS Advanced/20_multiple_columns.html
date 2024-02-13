@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Columns</title>
+    <style>
+        .newspaper{
+            /* column-count: 3; */
+            column-gap: 40px;
+            column-rule-style: solid;
+            column-rule-width: 1px;
+            column-rule-color: blue;
+            column-width: 100px; /*Only work if col-count not present*/
+        }
+        .newspaper h3{
+            column-span: all;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Multiple Columns</h1>
+    <div class="newspaper">
+        <h3>Dont make this in column</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quia debitis beatae dolor ipsam temporibus hic labore nihil et dignissimos, at sit excepturi sed, molestiae perferendis dolore veniam nobis adipisci.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae consequuntur assumenda voluptatum! Sunt distinctio, excepturi architecto neque quidem voluptatum quae ut ad perferendis voluptate non labore harum dolorum exercitationem rem!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tenetur laboriosam et hic voluptatem quia explicabo praesentium sunt optio beatae suscipit similique ducimus, veniam voluptates nostrum iusto. Optio, illo odio!
+        <h3>Dont make this in column</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, laborum quia hic exercitationem culpa, numquam illo consectetur facere facilis rerum non quibusdam reprehenderit amet earum sequi ipsam id ipsa maxime!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At amet saepe vel impedit illum, veritatis nam modi necessitatibus maiores eaque, pariatur consectetur esse voluptatibus cupiditate quas maxime voluptatem quidem. Consectetur!
+    </div>
+</body>
+</html>

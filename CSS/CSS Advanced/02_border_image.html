@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Image</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 30px;
+        }
+
+        #box{
+            width: 350px;
+            height: 350px;
+            border: 30px solid black;
+            text-align: justify;
+            padding: 20px;
+            background-color: lightpink;
+            /* border-image-source: url(/images/border_image.png);
+            border-image-slice: 34;
+            border-image-repeat: round;
+            border-image-outset: 20px;
+            border-image-width: 20px;
+            background-color: lightpink; */
+            border-image: linear-gradient(to right, red, yellow) 30 / 20px / 15px stretch;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Border Image</h1>
+
+    <div id="box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt voluptatibus omnis dolorum neque soluta accusantium blanditiis magni assumenda quae odio iusto quaerat, alias quod corrupti dolores in ex veritatis voluptatem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ipsum ad minima, deserunt obcaecati animi ullam quia dolorem laboriosam dolorum beatae consequuntur nisi veritatis quos ex officiis nesciunt, non mollitia.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quasi accusamus quidem, ex ratione laboriosam hic qui repellat autem aperiam debitis explicabo, neque, consectetur excepturi atque nobis? Autem, saepe distinctio.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fuga nam non eaque, suscipit amet ut adipisci soluta eum atque sapiente ea. Voluptatibus nemo voluptate consequuntur necessitatibus odit dolor vero?
+    </div>
+</body>
+</html>

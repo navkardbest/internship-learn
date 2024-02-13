@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes anime1 {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+        }
+
+        #div1 {
+            animation-timing-function: linear;
+        }
+
+        #div2 {
+            animation-timing-function: ease;
+        }
+
+        #div3 {
+            animation-timing-function: ease-in;
+        }
+
+        #div4 {
+            animation-timing-function: ease-out;
+        }
+
+        #div5 {
+            animation-timing-function: ease-in-out;
+        }
+
+        div:hover {
+            animation-name: anime1;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-iteration-count: 3;
+            animation-direction: reverse;
+            /*normal,reverse,alternate,alternate-reverse*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Animation</h1>
+    <div id="div1"></div>
+</body>
+
+</html>

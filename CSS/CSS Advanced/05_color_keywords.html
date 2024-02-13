@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(/images/bg_image.jpeg);
+            color: darkolivegreen;
+        }
+
+        div.ex1{
+            background-color: lightblue;
+            border: 2px solid black;
+            padding: 20px;
+        }
+        div.ex2{
+            color: white;
+            background-color: transparent; /*transparent keyword*/
+            border: 2px solid currentColor; /*currentColor keyowrd*/
+            padding: 20px;
+        }
+        div.ex3{
+            color: inherit;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>The transparent Keyword</h2>
+
+    <div class="ex1">This div has a light blue background.</div>
+    <br>
+    <div class="ex2">This div has a transparent background.</div>
+    <div class="ex3">This div we show inherit keyword.</div>
+</body>
+
+</html>

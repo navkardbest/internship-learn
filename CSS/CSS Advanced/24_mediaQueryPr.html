@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>Media Query</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .topnav{
+            overflow: hidden;
+            background-color: black;
+        }
+        .topnav a{
+            float: left;
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 15px 16px;
+            text-align: center;
+        }
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        @media screen and (max-width: 600px){
+            .topnav{
+                background-color: lightblue;
+            }
+            .topnav a{
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Responsive navigation menu</h2>
+    <p>Resize the browser window to see the effect: When the screen is less than 600px, the navigation menu will be displayed vertically instead of horizontally.</p>
+
+    <div class="topnav">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+</body>
+</html>
