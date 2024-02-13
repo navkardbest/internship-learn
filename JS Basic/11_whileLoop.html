@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+
+    <script>
+        /*
+        // Your JavaScript code here
+        let i = 0;
+        text = "";
+        while(i<5){
+            text += "the number is  " + i + "<br>";
+            i++
+        }
+        document.getElementById('demo').innerHTML = text;
+
+        */
+        /*
+         let text = "";
+         let i =0;
+         do{
+             text += "The number is " + i + "<br>"
+             i++;
+         }while(i<3)
+         document.getElementById('demo').innerHTML = text;
+         */
+
+        // const cars = ["BMW","Volvo","Saab"];
+        // let i = 0;
+        // let text = "";
+
+        // // while (cars[i]){
+        // //     text += cars[i];
+        // //     i++;
+        // // }
+        // // document.getElementById('demo').innerHTML = text;
+
+        // for (let i = 0; i<10; i++){
+        //     if (i=== 3){continue;}
+        //     text += "The number is " + i + "<br>";
+        // }
+        // document.getElementById('demo').innerHTML = text;
+
+        const fruits = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+
+        let text = "";
+        for (const x of fruits) {
+            text += x + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+
+    </script>
+</body>
+
+</html>

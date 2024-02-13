@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Lorem, ipsum dolor.</h2>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+        Click me to display Date and Time.
+    </button>
+    <p id="demo"></p>
+
+    <h2>What Can JavaScript Do?</h2>
+
+    <p id="demop">
+        JavaScript can change the style of an HTML element
+    </p>
+
+    <button type="button" onclick="myFunc()">Click Me</button>
+    
+    <script>
+        function myFunc(){
+            document.getElementById("demo").innerHTML = 5 + 6;
+        }
+    </script>
+
+
+</body>
+</html>

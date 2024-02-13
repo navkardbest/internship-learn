@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <p>The length of the string is:</p>
+    <p id="demo"></p>
+
+    <script>
+        let text = "John Doe";
+        let car = 'Mercedes';
+        let qiq = "Hello I'm Navkar Shah";
+
+        // Template Strings
+        let tstring = `He's a "goo" boy`;
+        let testring = `
+        Lorem ipsum dolor 
+        sit amet 
+        consectetur.
+        `;
+
+        // length of string
+        let strl = "ABCDE__23 ";
+        let len = strl.length;
+
+        // Escape Characters (\b \f \n \r \t \v)
+        let esc = "We are called \"TG's\" of the g\\ame";
+
+        // JS Strings as Objects
+        let x = "John";
+        let y = new String("John"); // don't do this
+
+
+        
+        document.getElementById('demo').innerHTML = 
+        strl.length;
+    </script>
+</body>
+</html>

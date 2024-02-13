@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+        /*
+        const student = {
+
+            //data property
+            fName: "Navkar",
+
+            //accessor property
+            get getName() {
+                return this.fName;
+            }
+        };
+
+        // accessing data property
+        console.log(student.fName);
+
+        // accessing getter methods
+        console.log(student.getName);
+        */
+
+        // trying to access as a method
+        // console.log(student.getName()); --> gives an error
+
+        /*
+        const student1 = {
+            firstName: 'Monica',
+            set changeName(newName){
+                this.firstName = newName;
+            }
+        };
+
+        console.log(student1.firstName);
+        student1.changeName = "Navkar";
+        console.log(student1.firstName);
+        */
+
+        const student2 = {
+            firstName: 'Monica'
+        }
+
+        // getting property
+        Object.defineProperty(student2, "getName", {
+            get: function(){
+                return this.firstName;
+            }
+        });
+
+
+        // setting property
+        Object.defineProperty(student2, "changeName", {
+            set: function(value){
+                this.firstName = value;
+            }
+        });
+
+        console.log(student2.firstName);
+        student2.changeName = 'Navkar';
+        console.log(student2.firstName);
+
+    </script>
+</body>
+
+</html>
