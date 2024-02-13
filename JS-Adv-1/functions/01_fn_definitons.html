@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+        const x = function (a, b) {
+            return a * b;
+        };
+
+        let z = x(4, 3);
+        console.log(z);
+
+        // self invoking function
+        (function () {
+            document.getElementById('demo').innerHTML = "Hello World!";
+        }());
+        (function () {
+            document.getElementById('demo1').innerHTML = "Hello World!";
+        })();
+
+        // Functions Can Be Used as Values
+        function myFunction(a, b) {
+            return a * b;
+        }
+        let a = myFunction(4, 3);
+
+        // Functions can be used in expressions
+        function myFunction(a, b) {
+            return a * b;
+        }
+        let xy = myFunction(4, 3) * 2;
+
+        // arguments.length
+        function myFunction1(a, b) {
+            return arguments.length;
+        }
+
+        let text = myFunction1.toString();
+        console.log(text);
+        // console.log(myFunction1(2,3,1,1,1,1,1,1,1,1,1,1,1,1));
+
+        // ES 5
+        var d = function (x, y) {
+            return x * y;
+        }
+
+        // ES 6
+        const e = (x, y) => x * y;
+        const e1 = (x, y) => { return x * y };
+
+        function myFunction2(x, y) {
+            if (y === undefined) {
+                y = 2;
+            }
+            return x * y;
+        }
+        console.log(myFunction2(2));
+
+        function myFunction3(x, y = 10){
+            return y;
+        }
+        console.log(myFunction3(0));
+
+
+        // rest parameter
+
+        function sum(...args){
+            let sum = 0;
+            for (let arg of args) sum += arg;
+            return sum;
+        }
+        let xa = sum(4, 9, 16, 25, 29, 100, 66, 77);
+        console.log(xa);
+
+        // arguments object
+        function findMax(){
+            let max = -Infinity;
+            for (let i = 0; i<arguments.length; i++){
+                if(arguments[i] > max){max = arguments[i];}
+            }
+            return max;
+        }
+
+        // invoking a function as a function
+        function myFunction4(a, b){
+            return a * b;
+        }
+        myFunction4(10, 2);
+
+        // global object
+        let ax = myFunction5();
+        function myFunction5(){
+            return this;
+        }
+        // console.log(ax);
+
+        // invoking a function as a method
+        const myObj = {
+            fName: "Navkar",
+            lName: "Shah",
+            fullName: function(){
+                return this.fName + " " + this.lName;
+            }
+        }
+        console.log(myObj.fullName());
+
+    </script>
+</body>
+
+</html>

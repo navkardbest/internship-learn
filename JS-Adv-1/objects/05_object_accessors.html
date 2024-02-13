@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "English",
+            get lang() {
+                return this.language;
+            }
+        };
+
+        document.getElementById('demo').innerHTML = person1.lang;
+
+        const person2 = {
+            fName: "John",
+            lName: "Doe",
+            language: "",
+            set lang(lang){
+                this.language = lang;
+            }
+            
+        }
+        // person2.language = "Hindi";
+        person2.lang = "hindi"
+        person2.language.toUpperCase();
+
+        document.getElementById('demo1').innerHTML = person2.language;
+
+        // Object.defineProperty()
+        const obj = {
+            counter: 0
+        };
+
+        Object.defineProperty(obj, "reset", {
+            get: function(){
+                this.counter = 0;
+            }
+        });
+
+        Object.defineProperty(obj, "increment", {
+            get: function(){
+                this.counter++;
+            }
+        });
+
+        Object.defineProperty(obj, "add", {
+            set: function (value){
+                this.counter += value;
+            }
+        });
+
+        obj.reset;
+        obj.add = 5;
+        obj.increment;
+        
+        document.getElementById('demo2').innerHTML = obj.counter;
+
+
+
+        
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

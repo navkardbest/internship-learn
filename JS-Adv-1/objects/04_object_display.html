@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    
+    <script>
+        
+        // let array1 = [1,2,3,4];
+        // console.log(Array.isArray(array1));
+
+        // const person = {
+        //     fname: "Navkar",
+        //     lname: "Shah",
+        //     age: 20
+        // }
+        // // for...in
+        // let txt = "";
+        // for (let x in person){
+        //     txt += person[x] + " ";
+        // }
+        // console.log(txt);
+
+        // // for...of
+        // let text = "";
+        // for (let x of array1){
+        //     text += x + " ";
+        // }
+        // console.log(text);
+
+        // displaying object values via object.property
+        const person = {
+            name: "Navkar",
+            age: 30,
+            city: "Bhavnagar"
+        };
+
+        document.getElementById('demo').innerHTML = person.name + " , " + person.age + " , " +
+        person.city;
+
+        // displaying object values via loop
+        let txt = "";
+        for (let x in person){
+            txt += person[x] + " ";
+        };
+
+        document.getElementById('demo1').innerHTML = txt;
+        
+        const myIdentity = {
+            name: "Navkar",
+            age: 30,
+            city: "Bhavnagar"
+        };
+
+        const myArray = Object.values(myIdentity);
+        console.log(myArray);
+
+        let myString = JSON.stringify(myIdentity);
+        console.log(myString);
+        console.log(typeof(myString));
+
+        const myRealIdentity = {
+            name: "Navkar",
+            age: 30,
+            city: "Bhavnagar",
+            today: new Date()
+        };
+
+        let myRealString = JSON.stringify(myRealIdentity);
+        document.getElementById('demo2').innerHTML = myRealString;
+
+        const myRealIdentity2 = {
+            name: "Navkar",
+            age: function(){
+                return 30;
+            },
+            city: "Bhavnagar",
+            today: new Date()
+        };
+        // convert functions to strings to stringify
+        myRealIdentity2.age = myRealIdentity2.age.toString();
+        // stringify doesn't work on functions
+        let myImaginaryString = JSON.stringify(myRealIdentity2);
+        document.getElementById('demo3').innerHTML = myImaginaryString;
+
+        // convert array to string in JSON format
+        const myArr = ["John","Peter","Sally"];
+        let strArr = JSON.stringify(myArr);
+        document.getElementById('demo4').innerHTML = strArr;
+        
+
+
+        
+        
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>

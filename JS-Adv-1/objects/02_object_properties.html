@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+        const person = {
+            fname: "Devloper",
+            lname: "Member",
+            age: 25
+        };
+        person.height = "120cm";
+        delete person.age;
+
+        let txt = "";
+        for (let x in person) {
+            txt += person[x] + " ";
+        }
+        document.getElementById('demo').innerHTML = txt;
+
+        //nested object
+        const myObj = {
+            name: "John",
+            age: 30,
+            cars: {
+                car1: "Ford",
+                car2: "BMW"
+            }
+        }
+        console.log(myObj.cars.car2);
+        console.log(myObj["cars"]["car2"]);
+
+        // Nested Arrays and Objects
+        const dmgU1 = { //dmgU1 refers to Demographics of User 1
+            name: "John",
+            age: 30,
+            cars: [
+                { name: "Ford", models: ["Fiesta", "Focus"] },
+                { name: "BMW", models: ["A5", "X6"] }
+            ]
+        }
+
+        // To access arrays inside arrays, use a for-in loop for each array:
+        let x = "";
+        for (let i in dmgU1.cars){
+            x += "<h3>" + dmgU1.cars[i].name + "</h3>";
+            for (let j in dmgU1.cars[i].models){
+                x+= dmgU1.cars[i].models[j] + " ";
+            }
+        }
+        document.getElementById('demo').innerHTML = x;
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

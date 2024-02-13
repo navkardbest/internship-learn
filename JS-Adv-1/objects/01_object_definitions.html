@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    
+    <script>
+        const person1 = {
+            fName: "Navkar",
+            lName: "Shah",
+            age: 40
+        } // This is best method
+
+        const person2 = {};
+        person2.fName = "John";
+        person2.lName = "Doe";
+        person2.age = 30;
+        
+        const person3 = new Object();
+        person3.fName = "Sat";
+        person3.lName = "Sun";
+        person3.age = 20; // This is worst
+
+        // Objects are mutable
+        const person4 = {
+            fName: "Navkar",
+            lName: "Shah",
+            age: 40
+        }
+        const x = person4;
+        x.age = 10;
+
+        console.log(person4.age);
+
+
+    </script>
+</body>
+</html>

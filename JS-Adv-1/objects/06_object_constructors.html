@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    
+    <script>
+        function Person1(first, last, age, eye){
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            // adding new property to object constructor
+            this.nationality = "Indian";
+        }
+
+
+        const myFather = new Person1("John", "Doe", 50, "blue");
+        document.getElementById('demo').innerHTML = "My fathers age is " + 
+        myFather.age;
+
+        myFather.name = function (){
+            return this.firstName + " " + this.lastName;
+        };
+        document.getElementById('demo1').innerHTML = myFather.name();
+        document.getElementById('demo2').innerHTML = myFather.nationality;
+        
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    
+    <script>
+        const person = {
+            fName: "Navkar",
+            lName: "Shah",
+            age: 20
+        };
+
+        //change a property value
+        Object.defineProperty(person, "age", {value: 21});
+        Object.defineProperty(person, "fName", {value: "Robbin"});
+        console.log(person.age,person.fName);
+        console.log(Object.getOwnPropertyNames(person));
+
+        Object.defineProperty(person, "year", {value: 2004});
+        console.log(person.year);
+
+        Object.defineProperty(person, "fullName", {
+            get: function(){
+                return this.fName + " " + this.lName;
+            }
+        })
+        console.log(person.fullName);
+
+
+    </script>
+</body>
+</html>

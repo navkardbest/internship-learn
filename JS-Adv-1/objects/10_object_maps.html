@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+
+        /*
+        A Map holds key-value pairs where the keys can be any datatype.
+        A Map remembers the original insertion order of the keys.
+        A Map has a property that represents the size of the map.
+        */
+
+        // creating a map
+        const fruits = new Map([
+            ["apples", 500],
+            ["banana", 300]
+        ]);
+
+        // set map values
+        fruits.set("mango", 500);
+        fruits.set("kiwi", 300);
+
+        // change existing values - set() method
+        fruits.set("apples", 200);
+
+        document.getElementById('demo').innerHTML = fruits.get("apples");
+        document.getElementById('demo1').innerHTML = fruits.size;
+
+        console.log(fruits);
+
+        // delete() method
+        fruits.delete("mango");
+        console.log(fruits);
+
+        // clear() method
+        // fruits.clear();
+        console.log(fruits);
+
+        // has() method
+        
+        console.log(fruits.has("apples"));
+        console.log(fruits.has("mango"));
+
+        // typeof() , instanceof
+        console.log(typeof(fruits));
+        console.log(fruits instanceof Map);
+
+        // Map.forEach()
+        let txt1  = "";
+        fruits.forEach (function(value,key){
+            txt1 += key + ' = ' + value + " ";
+        })
+
+        console.log(txt1);
+
+        let txt2 = "";
+        for (const x of fruits.entries()){
+            txt2 += x + " ";
+        }
+
+        console.log(txt2);
+
+        let txt3 = "";
+        for (const x of fruits.keys()){
+            txt3 += x + " ";
+        }
+
+        console.log(txt3);
+
+        let txt4 = "";
+        for (const x of fruits.values()){
+            txt4+= x + " ";
+        }
+
+        console.log(txt4);
+
+
+        // create objects
+        const apples = {name: 'Apples'};
+        const bananas = {name: 'Bananas'};
+        const oranges = {name: 'Oranges'};
+        //create map
+        const fruits1 = new Map();
+        //add new elements to the map
+        fruits1.set(apples, 500);
+        fruits1.set(bananas, 200);
+        fruits1.set(oranges, 300);
+
+        document.getElementById('demo3').innerHTML = fruits1.get(apples);
+        
+
+
+
+        
+
+
+
+
+
+        
+        
+
+    </script>
+</body>
+
+</html>

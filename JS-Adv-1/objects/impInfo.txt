@@ -1,0 +1,66 @@
+In JavaScript, almost "everything" is an object.
+    Booleans can be objects (if defined with the new keyword)
+    Numbers can be objects (if defined with the new keyword)
+    Strings can be objects (if defined with the new keyword)
+    Dates are always objects
+    Maths are always objects
+    Regular expressions are always objects
+    Arrays are always objects
+    Functions are always objects
+    Objects are always objects
+
+    All JavaScript values, except primitives, are objects.
+
+Primitive:
+    A primitive value is a value that has no properties or methods.
+    A primitive data type is data that has a primitive value.
+    JavaScript defines 7 types of primitive data types:
+        1.string 
+        2.number
+        3.boolean 
+        4.null 
+        5.undefined 
+        6.symbol 
+        7.bigint 
+    Primitive values are immutable.
+
+Object Methods:
+    Object properties can be both primitive values, other objects, and functions.
+    An object method is an object property containing a function definition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for...in Loop 
+    The JavaScript for...in statement loops through the properties of an object.
+
+this 
+    In JavaScript, the this keyword refers to an object.
+
+    Which object depends on how this is being invoked (used or called).
+
+    The this keyword refers to different objects depending on how it is used:
+
+    In an object method, this refers to the object.
+    Alone, this refers to the global object.
+    In a function, this refers to the global object.
+    In a function, in strict mode, this is undefined.
+    In an event, this refers to the element that received the event.
+    Methods like call(), apply(), and bind() can refer this to any object.
+

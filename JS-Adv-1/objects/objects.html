@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+        /*
+        // Writing an Object
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 20
+        };
+        document.getElementById('demo').innerHTML = person.firstName;
+
+        // Creating an Object Methods
+        const name1 = {}; // using literal
+        const name2 = new Object(); // using new
+        function name(fName, lName) {
+            this.firstName = fName,
+                this.lastName = lName
+        }
+        const myName = new name("Navkar", "Shah"); // using object constructor
+        Object.create = new name1;
+
+        */
+
+        //using an object literal
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 20
+        };
+
+        /*
+        // add properties to JS Object
+        person1.firstName = "John";
+        person1.lastName = "Doe";
+        */
+
+        // JS Objects are mutable
+        const person2 = person1;
+        person2.firstName = "Navkar";
+        person2.lastName = "Shah";
+
+        console.log(person2.firstName);
+        console.log(person2.firstName);
+
+        // for in Loop
+        let txt = "";
+        for (let x in person1) {
+            txt += person1[x] + " ";
+        }
+        console.log(txt);
+
+        // adding new properties
+        person2.nationality = "Indian";
+        console.log(person2.nationality);
+
+        // deleting properties
+        delete person2.nationality;
+        console.log(person2.nationality);
+
+
+        // nested objects
+        // Values in an object can be another object
+        myObj = {
+            name: "John",
+            age: 30,
+            cars: {
+                car1: "Ford",
+                car2: "BMW",
+                car3: "Fiat"
+            }
+        }
+
+        // accessing nested objects
+        console.log(myObj.cars.car1);
+        console.log(myObj.cars["car1"]);
+        console.log(myObj["cars"]["car1"]);
+
+        // nested arrays and objects
+        const newObj = {
+            letters: ["a", "b", "c"],
+            pairs: [
+                { a: "a1" },
+                { b: "b1" }
+            ]
+        }
+
+        // to access arrays inside arrays use a for in loop
+        const myObj = {
+            name: "John",
+            age: 30,
+            cars: [
+                { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+                { name: "BMW", models: ["320", "X3", "X5"] },
+                { name: "Fiat", models: ["500", "Panda"] }
+            ]
+        }
+
+        for (let i in myObj.cars){
+            x += myObj.cars[i].name;
+            for (let j in myObj.cars[i].models){
+                x += myObj.cars[i].models[j];
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
