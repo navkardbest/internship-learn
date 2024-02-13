@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+
+    <script>
+
+        // forEach()
+        const numbers = [45, 4, 9, 16, 25];
+        let txt = "";
+        numbers.forEach((value, index, array) => {
+            txt += value + "<br>";
+        })
+        document.getElementById('demo').innerHTML = txt;
+
+        //map()
+        const num1 = [45, 4, 9, 16, 25];
+        const num2 = num1.map((value, index, array) => {
+            return value * 2;
+        });
+        console.log(num1);
+        console.log(num2);
+
+        //flatMap() similar to .map().flat() but more efficient
+        const arr1 = [1, 2, 1];
+        const result = arr1.flatMap((num) => (num === 2 ? [2, 2, 4] : [1, 3]));
+        console.log(result);
+
+        //filter()
+        const num3 = [45, 4, 9, 16, 25];
+        const over18 = num3.filter((value, index, array) => {
+            return (value > 18);
+        })
+        console.log(over18);
+
+        //reduce()
+        const num4 = [45, 4, 9, 16, 25];
+        const sum = num4.reduce((total, value, index, array) => {
+            return total + value;
+        }, 100);
+        console.log(sum);
+
+        //reduceRight()
+        const num5 = [45, 4, 9, 16, 25];
+        const sum1 = num5.reduceRight((total, value, index, array) => {
+            return total + value;
+        })
+        console.log(sum1);
+
+        //every()
+        const num6 = [45, 4, 9, 16, 25];
+        const allOver18 = num6.every((value, index, array) => {
+            return (value > 18);
+        })
+        console.log(allOver18);
+
+        //some()
+        const num7 = [45, 4, 9, 16, 25];
+        const someOver18 = num7.some((value, index, array) => {
+            return (value > 18);
+        })
+        console.log(someOver18);
+
+        //Array.from()
+        const str1 = "ASDFGHJKL";
+        const arr2 = Array.from(str1);
+        console.log(arr2);
+
+        //keys()
+        const fruits = ["Banana", "Kiwi", "Orange", "Apple"];
+        const keys = fruits.keys();
+        let text = "";
+        for (let x of keys) {
+            text += (x + "<br>");
+        }
+        document.getElementById('demo').innerHTML = text;
+
+        //entries()
+        const fruits1 = ["Banana", "Kiwi", "Orange", "Apple"];
+        const f = fruits1.entries();
+
+        for (let x of f) {
+            document.getElementById('demo').innerHTML += x;
+
+        }
+
+        //with()
+        // Array with() method as a safe way to update elements in an array without altering the original array.
+        const months = ["Jan", "Feb", "Mar", "May"];
+        const myMonths = months.with(3, "April");
+        console.log(myMonths);
+
+        //spread (...)
+        const q1 = ["Jan", "Feb", "Mar"];
+        const q2 = ["Apr", "May", "Jun"];
+        const q3 = ["Jul", "Aug", "Sep"];
+        const q4 = ["Oct", "Nov", "Dec"];
+
+        const year = [...q1,...q2,...q3,...q4];
+        console.log(year);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

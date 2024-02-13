@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"Fetch a file to change this text.></p>
+    
+    
+    <script>
+        // let file = "fetch_info.txt";
+        // fetch(file)
+        // .then(x => x.text())
+        // .then(y => document.getElementById('demo').innerHTML = y);
+        
+        getText("fetch_info.txt");
+        async function getText(file){
+            let myObject = await fetch(file);
+            let myText = await x.text();
+            document.getElementById('demo').innerHTML = y;
+            
+        }
+
+        
+
+        
+
+
+    </script>
+</body>
+</html>

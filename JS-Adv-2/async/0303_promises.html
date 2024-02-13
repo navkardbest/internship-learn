@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1">Set interval with a Callback</p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    
+    <script>
+        /*
+        function myDisplayer(some){
+            document.getElementById('demo').innerHTML = some;
+        }
+        let myPromise = new Promise(
+            function (myResolve,myReject){
+                let x = 0;
+                // x = 5;
+
+                if(x == 0){
+                    myResolve("OK");
+                } else {
+                    myReject("Error");
+                }
+            }
+        );
+
+        myPromise.then(
+            function(value) {myDisplayer(value);},
+            function(error) {myDisplayer(error);}
+        );
+        
+
+        // example using callback
+        setTimeout(function() {
+            myFunction("I am boss!!!");
+        },3000);
+
+        function myFunction(value){
+            document.getElementById('demo3').innerHTML = value;
+        }
+
+        
+        // example using promise
+        let myPromise = new Promise (function(myResolve,myReject){
+            setTimeout(function(){
+                myResolve("Hello");
+            },3000)
+        });
+  
+        myPromise.then(function(value){
+            document.getElementById('demo4').innerHTML = value;
+            
+        });
+
+        //example using callback
+        function myDisplayer(some){
+            document.getElementById('demo').innerHTML = some;
+        }
+
+        function getFile(myCallback){
+            let req = new XMLHttpRequest();
+            req.onload = function(){
+                if (req.status == 200){
+                    myCallback(this.responseText);
+                } else {
+                    myCallback("Error: " + req.status);
+                }
+            }
+            req.open('GET', "mycar.html");
+            req.send();
+        }
+
+        getFile(myDisplayer);
+
+        
+        //example using promise
+        let myPromise = new Promise(function(myResolve, myReject){
+            let req = new XMLHttpRequest();
+            req.open('GET', "mycar.html");
+            req.onload = function(){
+                if (req.status == 200){
+                    myResolve(req.response);
+                } else {
+                    myReject("File not Found");
+                }
+            };
+            req.send();
+        });
+
+        myPromise.then(
+            function (value) {myDisplayer(value);},
+            function(error) {myDisplayer(error);}
+        );
+
+        let myPromise = new Promise((resolve,reject) => {
+            const x = "navkarshah";
+            const y = "navkarshah";
+            if(x == y) resolve();
+            else reject;
+        });
+
+        myPromise.then(()=> {
+            console.log('Success');
+        }).catch(() => {
+            console.log('Error Occured');
+        })
+
+        fetch(`https://dummy.restapiexample.com/api/v1/employees`).then((response) => {
+            // This will get called
+        }).catch((error) => {
+            // This will get called
+        }).finally(() => {
+            // This will get called
+        })
+
+
+        const is_true = true;
+        const new_promise = new Promise((resolve,reject) => {
+            if(is_true){
+                resolve()
+            } else {
+                reject()
+            }
+        })
+
+        new_promise.then((response) => {
+
+        }).catch((error) => {
+
+        })
+
+
+        const count = true;
+
+        let countValue = new Promise(function (resolve, reject){
+            if(count){
+                resolve("There is a count value.");
+            } else {
+                reject("There is no count value");
+            }
+        });
+
+        console.log(countValue);
+
+        */
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

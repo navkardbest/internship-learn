@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web API</title>
+</head>
+<body>
+    <!-- <h1>Web APIs</h1>
+
+    <input type="number" name="n1" id="id1" min="30" max="50" required>
+    <button onclick="f3()">Click Me</button>
+
+    <p id="demo"></p>
+    <p id="demo1"></p> -->
+
+
+
+    <script>
+
+        // console.log(navigator.connection);
+        // console.log(navigator.cookieEnabled);
+        // console.log(navigator.deviceMemory);
+        // console.log(navigator.geolocation);
+        // console.log(navigator.gpu);
+        // console.log(navigator.getBattery());
+
+        /*
+        function f1(){
+            const obj1 = document.getElementById("id1");
+            if (!obj1.checkValidity()) {
+                document.getElementById('demo').innerHTML = 
+                obj1.validationMessage;
+            } else {
+                document.getElementById('demo').innerHTML = 
+                "Input OK";
+                
+            }
+        }
+
+        function f2(){
+            let text = "Value Ok";
+            if (document.getElementById("id1").validity.rangeOverflow){
+                text = "Value Too Large"
+            }
+            document.getElementById('demo').innerHTML = text;
+        }
+        
+        function f3(){
+            window.history.back();
+            window.history.go(0);
+        }
+
+        
+
+        localStorage.setItem("myCat", "Tom");
+
+        const cat = localStorage.getItem("myCat");
+
+        */
+
+        const apiUrl = 'http://colormind.io/api/';
+
+        fetch(apiUrl)
+        .then(response => {
+            if(!response.ok){
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(userData => {
+            console.log('User Data: ', userData);
+        })
+        .catch(error => {
+            console.log('Error: ',error);
+        })
+        
+
+
+
+
+        
+    </script>
+</body>
+</html>

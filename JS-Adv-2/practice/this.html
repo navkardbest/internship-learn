@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <button type="button" onclick="this.style.display='none'">Click Me</button>
+
+    <script>
+        // this keyword
+
+        // const person = {
+        //     fName: "navkar",
+        //     lName: "shah",
+        //     id: 2024,
+        //     fullName: function(){
+        //         return (this.fName + " " + this.lName);
+        //     }
+        // }
+        // console.log(person.fullName);
+        // document.getElementById('demo').innerHTML = person.fullName();
+
+        //call()
+        const person1 = {
+            fullName: function () {
+                return this.firstName + " " + this.lastName + " "
+            }
+        }
+
+        const person2 = {
+            firstName: "John",
+            lastName: "Doe",
+        }
+
+        let x = person1.fullName.call(person2);
+        document.getElementById("demo").innerHTML = x;
+
+        //bind()
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        const member = {
+            firstName:"Navkar",
+            lastName:"Shah"
+        }
+
+        let fullName = person.fullName.bind(member);
+        document.getElementById('demo').innerHTML = fullName();
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

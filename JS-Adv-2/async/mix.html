@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    
+    <script>
+        // function mainFunction(callback){
+        //     console.log('Performing Operation...');
+        //     // Async Operation Comes
+        //     setTimeout(() => {
+        //         callback("Operation Complete");
+        //     }, 1000)
+        // }
+
+        // function cbf(result){
+        //     console.log('Result: ' + result);
+        // }
+        // mainFunction(cbf);
+
+        function counter(){
+            let count = 0;
+
+            return function(){
+                count++;
+                console.log(count);
+            };
+        }
+        const increment = counter();
+        increment();
+        increment();
+        increment();
+        increment();
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    
+    <script>
+        // const fruits = new Map([
+        //     ["apples", 500],
+        //     ["banana", 300],
+        //     ["oranges", 200]
+        // ]);
+        // fruits.set("apples",400);
+        // fruits.get("apples");
+        // fruits.size;
+        // fruits.delete("banana");
+        // fruits.has("oranges");
+
+        // const colors = new Map();
+        // colors.set("red",100);
+        // colors.set("green",200);
+        // colors.set("blue",300);
+
+        // forEach() method
+        let text = "";
+        const fruits1 = new Map([
+            ["apples", 500],
+            ["banana", 300],
+            ["oranges", 200]
+        ]);
+        fruits1.forEach((value,key) => {
+            text += `${key} = ${value} `;
+        })
+        console.log(text);
+        
+
+
+
+
+    </script>
+</body>
+</html>

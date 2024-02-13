@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+
+    <script>
+        const d1 = new Date();
+        const d2 = new Date("2025-04-21");
+        const d3 = new Date("October 12, 2015 11:13:00");
+        const d4 = new Date(2024, 11);
+        const d5 = new Date(2024, 11, 6);
+        const d6 = new Date(2024, 11, 6, 11);
+        const d7 = new Date(2024, 11, 6, 11, 4);
+        const d8 = new Date(2024, 11, 6, 11, 4, 10);
+        const d9 = new Date(2024, 11, 6, 11, 4, 10, 5);
+        const d10 = new Date(3000);
+
+
+        /*
+        new Date()
+        new Date(date string)
+        new Date(year, month)
+        new Date(year, month, day)
+        new Date(year, month, day, hours)
+        new Date(year, month, day, hours, minutes)
+        new Date(year, month, day, hours, minutes, seconds)
+        new Date(year, month, day, hours, minutes, seconds, ms)
+        new Date(milliseconds)
+        JS Counts months from 0 to 11;
+        If month higher than 11 then add to next year , similarly for other parameters.
+        */
+
+        // console.log(d1);
+        // console.log(d2);
+        // console.log(d3);
+        // console.log(d4);
+        // console.log(d5);
+        // console.log(d6);
+        // console.log(d7);
+        // console.log(d8);
+        // console.log(d9);
+        // console.log(d10);
+
+        // d2.toString();
+        // d3.toDateString();
+        // d4.toUTCString();
+        // d5.toISOString();
+
+        //parse() convert to mili seconds
+        let msec = Date.parse("Mar 21 2015");
+        console.log(msec);
+
+        /*
+        getFullYear()	Get year as a four digit number(yyyy)
+        getMonth()	Get month as a number(0 - 11)
+        getDate()	Get day as a number(1 - 31)
+        getDay()	Get weekday as a number(0 - 6)
+        getHours()	Get hour(0 - 23)
+        getMinutes()	Get minute(0 - 59)
+        getSeconds()	Get second(0 - 59)
+        getMilliseconds()	Get millisecond(0 - 999)
+        getTime()	Get time(milliseconds since January 1, 1970)
+        */
+
+        const d11 = new Date("2022 Jan 15");
+        console.log(d11.getFullYear());
+        console.log(d11.getMonth());
+        console.log(d11.getDate());
+        console.log(d11.getHours());
+        console.log(d11.getMinutes());
+        console.log(d11.getSeconds());
+        console.log(d11.getMilliseconds());
+        console.log(d11.getDay());
+
+        //getTimzoneOffset()
+        let diff = d10.getTimezoneOffset();
+        console.log(diff);
+
+        const d12 = new Date();
+        d12.setFullYear(2020);
+        d12.setMonth(2);
+        d12.setDate(12);
+        d12.setHours(1);
+        d12.setMinutes(0);
+        d12.setSeconds(0);
+
+        console.log(d12);
+
+        // compare dates
+        let text = "";
+        const today = new Date();
+        const someday = new Date();
+        someday.setFullYear(2100,0,14);
+
+        if(someday > today){
+            text = "Today is before January 14, 2100."
+        }else{
+            text = "Today is after January 14, 2100.";
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

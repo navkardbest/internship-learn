@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+
+    <!-- Event -->
+    <button onclick="document.getElementById('demo').innerHTML = Date();">Click to find the Time</button>
+    <button onclick="this.innerHTML = Date()">CLick to see the time</button>
+    <button onclick="displayDate()">Click to display date</button>
+    <button onmouseover="this.innerHTML = 'Mouse Over Done'">Mouse Over</button>
+
+
+    <script>
+        let x = myFunction(4,3);
+        function myFunction(a,b){
+            return a / b;
+        }
+
+        // () Operator
+        function toCelsius(value){
+            return (5/9) * (value-32);
+        }
+        // let y = toCelsius(33); --> refers to function result
+        // let y = toCelsius();  --> Output is Nan
+        // let y = toCelsius; --> refers to function object not function result
+
+        //T Functions Used as Variable Values
+        let y = toCelsius(77);
+        let text1 = "The temperature is " + x + " Celsius";
+        let text2 = "The temperature is " + toCelsius(77) + " Celsius";
+
+        //T Local Variables
+        function selectCar(){
+            let carName  = "Volvo";
+        }
+        // let carName  = "Volvo";
+        // let z = carName;
+
+        //T Objects
+        const car = {type:"Fiat", model:"500", color:"white"};
+        const person = {fName:"Navkar",lName:"Shah"};
+
+        const myPerson = {
+            fName: "John",
+            lName: "Dow",
+            age:50,
+            fullName: function(){
+                return this.fName + " " + this.lName;
+            }
+        };
+
+
+        // accessing object properties
+        console.log(myPerson.fName);
+        console.log(myPerson["lName"]);
+        console.log(myPerson.fullName());
+
+        //T Events
+        function displayDate(){
+            document.getElementById('demo').innerHTML = Date();
+            
+        }
+
+        //T Strings
+        let text11 = "Hello Everyone!";
+        let text12 = 'Hello Everyone!';
+        let text13 = "Hello Everyone! I'm Navkar";
+        let text14 = `This is a tem'p late "String"`;
+        let text15 = "Yes \nWe are called the \"legends\" of the galaxy";
+        let text16 = `This
+                        is in
+                        one line
+                        only (incorrect).`
+        let text17 = "Hello";
+        let text18 = new String("Hello");
+
+        console.log(text14.length);
+        console.log(text15);
+        console.log(text16);
+        console.log(text17 == text18);
+        console.log(text17 === text18);
+
+        //Breaking Long Lines
+        document.getElementById('demo').innerHTML = 
+        "Hello World!";
+
+        //T String Methods - Javascript strings are primitive and immutable: 
+        // All string methods produces a new string without altering the original string.
+
+        let text21 = "ASDFGHJKL";
+        let char21 = text21.charAt(0); // charAt()
+        let char22 = text21.charCodeAt(0); // charCodeAt,returns UTF-16 Code
+        let char23 = text21.at(0); // at()
+        let char24 = text21[0]; // [] Property Acess might be unpredictable
+
+
+        console.log(text21.length);
+        console.log(char21);
+        console.log(char22);
+        console.log(char23);
+        console.log(char24);
+
+        // Extracting String Parts - Slicing
+        let text31 = "This is a demo string!";
+        let part31 = text31.slice(5,10); // slice(a,b) , a included b not-included
+        let part32 = text31.slice(5); // slice(a) , slices rest of the string
+        let part33 = text31.slice(-12); // slice(-a) , slices starting from last position
+
+        console.log(part31);
+        console.log(part32);
+        console.log(part33);
+
+        // Extracting String Parts - substring()
+        let text41 = "Apple, Banana, Kiwi";
+        let part41 = text41.substring(7,13);
+        let part42 = text41.substring(7); // (a) slices rest out of string
+        let part43 = text41.substring(-1); // (-a) will be treated as 0
+
+        console.log(part41);
+        console.log(part42);
+        console.log(part43);
+
+        // Extracting String Parts - substr()
+        let text51 = "This is a good book";
+        let part51 = text51.substr(0,4);
+        let part52 = text51.substr(4);
+        let part53 = text51.substr(-4,4);
+        
+        console.log(part51);
+        console.log(part52);
+        console.log(part53);
+
+        // toUpperCase() , toLowerCase() , concat() , trim() , trimStart() , trimEnd()
+        let text61 = "Hello World!";
+        let text62 = text61.toUpperCase();
+        let text63 = text61.toLowerCase();
+        let text64 = " World is beautiful!";
+        let text65 = text61.concat(text64);
+        let text66 = "      Tab ed  Word";
+        let text67 = text66.trim(); // trim() removes whitespaces from both sides of string
+        let text68 = text66.trimStart();
+        let text69 = text66.trimEnd();
+
+        console.log(text62);
+        console.log(text63);
+        console.log(text65);
+        console.log(text67);
+        console.log(text68);
+        console.log(text69);
+
+        // String Padding - padStart() , padEnd() 
+        let text70 = "5";
+        let padded70 = text70.padStart(4,"0"); // Pad a string with "0" until it reaches the length 4
+        let padded71 = text70.padEnd(5,"Hello World!");
+
+        console.log(padded70); 
+        console.log(padded71); 
+
+        // String Repeat
+        let text81 = "Hello World!";
+        let result81 = text81.repeat(3);
+
+        console.log(result81);
+ 
+        // Replacing String Content - .replace() , .replaceAll()
+        let text91 = "Please visit Microsoft and Microsoft"
+        let replace91 = text91.replace("Microsoft","DgWebStudio"); //replaces only first match and is case-sensitive
+        let replace92 = text91.replace(/MICROSOFT/i , "DgWebStudio"); // /i flag makes it case-insensitive
+        let replace93 = text91.replace(/Microsoft/g , "DgWebStudio"); // /g global flag - replaces all
+        let replace94 = text91.replaceAll("Microsoft","DgWebStudio"); //  replaces all
+
+        console.log(replace91);
+        console.log(replace92);
+        console.log(replace93);
+        console.log(replace94);
+
+        // Converting string to an array - .split()
+
+        let text101 = "ABigString, ASmallString | ALittleString";
+        const array101 = text101.split(""); // returns array of single line characters
+        const array102 = text101.split(); // returns array of entire string in first index
+        const array103 = text101.split(","); // reads space
+        const array104 = text101.split("|"); //reads space
+        const array105 = text101.split(" "); //doesn't read space
+
+        console.log(array101);
+        console.log(array102);
+        console.log(array103);
+        console.log(array104);
+        console.log(array105);
+
+        //T String Search
+
+        // String - indexOf() , lastIndexOf() - both returns -1 if not found , search()
+        let text111 = "Please locate where 'locate' occurs!";
+        let index111 = text111.indexOf("locate"); // gives index of first occurence
+        let index112 = text111.lastIndexOf("locate"); // gives index of last occurence
+        let index113 = text111.indexOf("locate",8); // search starts at 8 from front, ends at ending
+        let index114 = text111.lastIndexOf("locate",10); //search starts at 10 from end , ends at beginning
+        let index115 = text111.search("locate"); // returns index at first match value
+
+        console.log(index111);
+        console.log(index112);
+        console.log(index113);
+        console.log(index114);
+        console.log(index115);
+
+        //The search() method cannot take a second start position argument.
+        //The indexOf() method cannot take powerful search values (regular expressions).
+
+        // String match() -- returns array containing the results of matching
+        let text121 = "This Is the best text ever";
+        console.log(text121.match("is")); // matches first matched elem
+        console.log(text121.match(/is/)); // matches first matched elem
+        console.log(text121.match(/is/g)); // matches all elem
+        console.log(text121.match(/is/gi)); // matches all elem irrespective of case
+
+        // String matchAll() -- returns an iterator containing the results of matching a string against a string
+        let text122 = "I love cats. Cats are very easy to love. Cats are very popular."
+        const iterator122 = text122.matchAll("Cats");
+        const iterator123 = text122.matchAll(/cats/gi);
+
+        document.getElementById("demo").innerHTML = Array.from(iterator122);
+        document.getElementById("demo").innerHTML = Array.from(iterator123);
+        
+        // String inculdes() , startsWith() ,endsWith() - returns true if found else false
+        let text131 = "Hello world, welcome to the universe.";
+        
+        console.log(text131.includes("world")); 
+        console.log(text131.includes("world",12)); // start position
+        console.log(text131.startsWith("Hello"));
+        console.log(text131.startsWith("world",12)); // start position
+        console.log(text131.endsWith("Hello"));
+        console.log(text131.endsWith("world",12)); // start position
+
+        //T String Templates - Interpolation
+        let firstName141 = "Navkar";
+        let lastName141 = "Shah";
+
+        let text141 = `Welcome ${firstName141} ${lastName141}!`;
+        let text142 = `Welcome ${firstName141} ${lastName141}!`;
+        console.log(text141);
+
+        // Template literals allow expressions in strings
+        let price142 = 10;
+        let price143 = 0.25;
+
+        let total142 = `Total: ${(price142 * (1+price143)).toFixed(2)}`;
+        console.log(total142);
+
+        //HTML Templates
+        let header = "Template Strings";
+        let tags = ["template strings", "js", "es6"];
+
+        let html = `<h2>${header}</h2><ul>`;
+            for(const x of tags){
+                html += `<li>${x}</li>`;
+            }
+        html += `</ul>`;
+
+        document.getElementById('demo').innerHTML = html;
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Print Statements
+        // console.log(x);
+        // console.log(y);
+        // console.log(z);
+        // console.log(text1);
+        // console.log(text2);
+    </script>
+</body>
+</html>

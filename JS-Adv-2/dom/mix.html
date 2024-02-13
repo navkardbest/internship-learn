@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    
+    <!--
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <button id="btn1">Click Me</button>
+    -->
+   
+
+    <!--
+    <h1>JS HTML DOM</h1>
+    <p>Finding HTML Elements Using <b>document.forms</b>.</p>
+
+    <form action="#" id="frm1">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>These are the values of each element in the form:</p>
+    <p id="demo"></p>
+    <img src="/images/bg_image.jpeg" alt="BG Image" id="myImage">
+
+    -->
+
+    <!--
+    <h2>JS Validation</h2>
+    <form name="myForm" action="#" onsubmit="return validateForm()" id="frm1">
+        Name: <input type="text" name="fname" required>
+        <input type="submit" value="Submit">
+    </form>
+    -->
+
+    <p id="p2">Hello World</p>
+    <button type="button" onclick="document.getElementById('p2').style.visibility = 'hidden';">Click Me</button>
+
+    <script>
+        /*
+        // getElementById -> Method , 
+        document.getElementById('demo').innerHTML = "hello";
+        document.getElementsByTagName;
+        document.getElementsByClassName;
+        document.getElementById('btn1').onclick = function () {
+            console.log('Hello World');
+        }
+        const element = document.getElementById("demo1");
+        element.innerHTML = "Hello Everyone";
+        // const element1 = document.getElementById("demo33");
+        const h1 = document.getElementsByTagName('h1');
+        document.getElementById('demo2').innerHTML = "The text in the first para is: " +
+        h1[0].innerHTML;
+
+        const x = document.querySelectorAll("p");
+        console.log(x);
+
+        */
+        // document.write(Date());
+
+        /*
+        const x = document.forms["frm1"];
+        let text = "";
+        for(let i = 0; i < x.length; i++){
+            text += x.elements[i].value + "<br>";
+            document.getElementById('demo').innerHTML = text;
+        }
+        document.getElementById("myImage").src = "/images/header.jpeg";
+
+
+        document.getElementById('demo1').innerHTML = "Date: " + Date();
+        */
+
+        // function validateForm(){
+        //     let x = document.forms["myForm"]["fname"].value;
+        //     if (x == ""){
+        //         alert("Name must be filled out");
+        //         return false;
+        //     }
+        // }
+
+        document.getElementById('p2').style.color = "blue";
+        
+        
+
+
+    </script>
+</body>
+
+</html>

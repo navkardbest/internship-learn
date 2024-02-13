@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    
+    <script>
+
+        // sequence is important
+        function myDisplayer(some){
+            document.getElementById('demo').innerHTML = some;
+        }
+        /*
+
+        function first(){
+            myDisplayer("Hello");
+        }
+        function second(){
+            myDisplayer("Bye");
+        }
+        first();
+        second();
+
+        //sequence control
+        function myCalculator(num1,num2){
+            let sum = num1 + num2;
+            return sum;
+        }
+        let result = myCalculator(5,5);
+        myDisplayer(result);
+
+        // or
+        function myCalculator(num1,num2){
+            let sum = num1 + num2;
+            myDisplayer(sum);
+        }
+        myCalculator(5,4);
+
+        
+
+        // callback
+        function myCalculator(num1, num2, myCallback){
+            let sum = num1 + num2;
+            myCallback(sum);
+        }
+        myCalculator(5, 7, myDisplayer);
+
+        */
+
+        const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+        const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
+        document.getElementById('demo').innerHTML = posNumbers;
+
+        function removeNeg(numbers, callback){
+            const myArray = [];
+            for(const x of numbers){
+                if(callback(x)){
+                    myArray.push(x)
+                }
+            }
+            return myArray;
+        }
+        
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

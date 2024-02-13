@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+
+
+        function myDisplayer(some) {
+            document.getElementById('demo').innerHTML = some;
+
+        }
+
+        /*
+
+        function f1(){
+            return "Hello";
+        }
+        function x1(value){
+            myDisplayer(value);
+        }
+        function x2(error){
+            myDisplayer(error);
+        }
+
+        f1();
+        x1("Value");
+        x2("Error");
+
+        async function f1(){
+            return "Hello";
+        }
+
+        f1().then(
+            (value) => myDisplayer(value),
+            (error) => myDisplayer(error)
+        );
+
+
+        async function myDisplay() {
+            let myPromise = new Promise((resolve, reject) => {
+                resolve("This represents resolved");
+            });
+            document.getElementById('demo').innerHTML = await myPromise;
+
+        }
+        myDisplay();
+
+        */
+
+        async function myDisplay() {
+            let myPromise = new Promise(function (resolve) {
+                setTimeout(function () { resolve("I love You !!"); }, 3000);
+            });
+            document.getElementById("demo").innerHTML = await myPromise;
+        }
+
+        myDisplay();
+
+    </script>
+</body>
+
+</html>

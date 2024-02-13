@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+
+        /*
+        function myDisplayer(some) {
+            document.getElementById('demo').innerHTML = some;
+        }
+        async function myFunction() {
+            return "Hello";
+        }
+        myFunction().then(
+            function (value) { myDisplayer(value); },
+            function (error) { myDisplayer(error); }
+        );
+
+        async function myFunction(){
+            return "Hello Everyone";
+        }
+        myFunction().then(
+            function(value) {myDisplayer(value);}
+        );
+        
+
+        // async 
+        async function myDisplay(){
+            let myPromise = new Promise((resolve) => {
+                setTimeout(()=>{
+                    resolve("Hello resolve");
+                }, 3000);
+            });
+            document.getElementById('demo').innerHTML = 
+            await myPromise;
+            
+        }
+        myDisplay(); 
+
+        // async-await : waiting for a File
+        async function getFile(){
+            let myPromise = new Promise(function(resolve){
+                let req = new XMLHttpRequest();
+                req.open('GET', 'mycar.html');
+                req.onload = () => {
+                    if(req.status == 200){
+                        resolve(req.response);
+                    } else {
+                        resolve("File not found");
+                    }
+                };
+                req.send();
+            });
+            document.getElementById('demo').innerHTML = await myPromise;
+        }
+        getFile();
+
+        // basic syntax
+        async function myDisplay(){
+            let myPromise = new Promise((resolve,reject) => {
+                resolve("Hello Resolve");
+            })
+            document.getElementById('demo').innerHTML = await myPromise;
+            
+        }
+        myDisplay();
+
+        
+
+        // basic async
+        const getData = async () => {
+            let data = "Hello World";
+            return data;
+        }
+        getData().then(data => console.log(data));
+
+        
+
+        const getData = async () => {
+            let y = await "Hello World";
+            console.log(y);
+        }
+
+        console.log(1);
+        getData();
+        console.log(2);
+
+        function asyncOpMethod(){
+            let first_promise = 
+            new Promise((resolve,reject) => resolve("Hello"));
+            let second_promise =
+            new Promise((resolve,reject) => {
+                setTimeout(() => {
+                    resolve(" Hello World ");
+                }, 1000);
+            });
+
+            let combined_promise = 
+            Promise.all([first_promise, second_promise]);
+            return combined_promise;
+
+        }
+
+        async function display(){
+            let data = await asyncOpMethod();
+            console.log(data);
+        }
+
+        display();
+
+
+        function myDisplayer(some){
+            document.getElementById('demo').innerHTML = some;
+            
+        }
+
+        async function myFunction(){
+            document.getElementById('demo').innerHTML = "Hello World";
+            
+            return "Hello";
+        }
+        
+
+        myFunction().then(
+            function(value) {myDisplayer(value);},
+        );
+
+        */
+
+        async function myDisplay(){
+            let myPromise = new Promise(function(resolve){
+                setTimeout(function(){resolve("Hello World");}, 3000);
+            });
+            document.getElementById('demo').innerHTML = await myPromise;
+        }
+
+        myDisplay();
+
+        
+
+        
+        
+
+
+
+    </script>
+</body>
+
+</html>

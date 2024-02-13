@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    
+    <script>
+    let x = Math.floor(Math.random()* 100);
+    console.log(x);
+
+    //proper random function
+    function getRndInteger(min,max){
+        return Math.floor(Math.random()*(max-min+1)) + min;
+    }
+    console.log(getRndInteger(2,23));
+    </script>
+</body>
+</html>

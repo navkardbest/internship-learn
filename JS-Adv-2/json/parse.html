@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    
+    <script>
+        // JSON parse
+        const txt = '{"name": "John", "age": 30, "city": "New York"}'
+        const obj = JSON.parse(txt);
+        document.getElementById('demo').innerHTML = obj.name + ", " +
+        obj.age;
+
+        // JSON parse
+        const text = '["Ford", "BMW", "Audi"]';
+        const myArr = JSON.parse(text);
+
+        // JSON stringify
+        const obj1 = {name: "Navkar", age: 30, city: "Bhavnagar"}
+        const mystr = JSON.stringify(obj1);
+
+        const myJsonString = '["Ford", "BMW", "Kia"]';
+        const myJsonArray = JSON.parse(myJsonString);
+        console.log(Array.isArray(myJsonArray)); 
+        document.getElementById('demo1').innerHTML = myJsonArray[1];
+
+
+        
+        
+
+
+
+        
+    </script>
+</body>
+</html>

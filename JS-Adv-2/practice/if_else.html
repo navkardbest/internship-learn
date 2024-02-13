@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+
+    <script>
+        if (hour < 18) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+
+        if (time < 10) {
+            greeting = "Good morning";
+        } else if (time < 20) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+
+        //switch
+
+        /*
+        switch(expression){
+            case x;
+                break;
+            case y:
+                break;
+            default:
+                break;
+        }
+        */
+
+        // Switch cases use strict comparison (===).
+        
+        // If multiple cases matches a case value, the first case is selected.
+        // If no matching cases are found, the program continues to the default label.
+        // If no default label is found, the program continues to the statement(s) after the switch.
+
+
+        switch(new Date().getDay()){
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+            case 4:
+                day = "Wednesday";
+                break;
+
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+            default:
+                day = "Monday";
+        }
+
+    </script>
+</body>
+
+</html>

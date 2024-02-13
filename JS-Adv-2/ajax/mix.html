@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <!-- Example 1 -->
+    <!-- <div id="demo">
+        <h2>The XMLHttpRequest Object</h2>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div> -->
+
+    <!-- Example 2 -->
+    <!-- <div id="demo">
+        <h2>The XMLHttpRequest Object</h2>
+        <button type="button" onclick="loadDoc('ajax_info.txt',myFunction)">Change Content</button>
+    </div> -->
+
+    <!-- Example 3 -->
+    <h2>The XMLHttpRequest Object</h2>
+    <button type="button" onclick="loadDoc()">Request data</button>
+    <p id="demo"></p>
+
+    <script>
+        /*
+        example 1
+        function loadDoc(){
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function(){
+                document.getElementById('demo').innerHTML = this.responseText;
+                
+            }
+            xhttp.open("GET", "ajax_info.txt");
+            xhttp.send();
+        }
+        */
+
+        /*
+        example 2
+        
+        function loadDoc(url, xFunction) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                xFunction(this);
+            }
+            xhttp.open("GET", url);
+            xhttp.send();
+        }
+
+        function myFunction(xhttp) {
+            document.getElementById("demo").innerHTML = xhttp.responseText;
+        }
+
+        */
+
+        function loadDoc(){
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function(){
+                document.getElementById('demo').innerHTML = this.responseText;
+                
+            }
+            xhttp.open("POST", "ajax_test.asp");
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("fname=Henry&lname=Ford");
+        }
+
+
+
+    </script>
+</body>
+
+</html>

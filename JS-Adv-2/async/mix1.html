@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+
+        /*
+
+        // setTimeout() makes that a macro task
+        // macro tasks are executed at the end of an event
+        console.log("first!");
+
+        setTimeout(function second() {
+            console.log("Timed Out1!");
+        }, 0);
+        console.log("final!");
+        setTimeout(function second() {
+            console.log("Timed Out2!");
+        }, 0);
+        console.log("final!");
+
+
+        const movies = [
+            {
+                title: `A New Hope`,
+                body: `After Princess Leia, the leader of the Rebel Alliance, is held hostage by Darth Vader, Luke and Han Solo must free her and destroy the powerful weapon created by the Galactic Empire.`,
+            },
+            {
+                title: `The Empire Strikes Back`,
+                body: `Darth Vader is adamant about turning Luke Skywalker to the dark side. Master Yoda trains Luke to become a Jedi Knight while his friends try to fend off the Imperial fleet.`,
+            },
+        ];
+
+        function getMovies() {
+            setTimeout(() => {
+                movies.forEach((movie, index) => {
+                    console.log(movie.title);
+                })
+            }, 1000);
+        }
+
+        function createMovies(movie) {
+            setTimeout(() => {
+                movies.push(movie)
+            }, 2000);
+        }
+
+        getMovies();
+        createMovies({ title: `Return of the Jedi`, body: `Luke Skywalker attempts to bring his father back to the light side of the Force. At the same time, the rebels hatch a plan to destroy the second Death Star.` });
+        getMovies();
+
+        */
+
+        async function example(){
+            let promise = new Promise((resolve, reject) => {
+                setTimeout(()=> resolve("done!"), 2000)
+            });
+
+            let result = await promise;
+            alert(result);
+        }
+        example();
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

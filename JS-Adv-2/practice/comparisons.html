@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    
+    <script>
+        //Ternary Operator ?
+        // let age = window.prompt("Enter your age");
+        let voteActive = (age<18) ? "Too young":"Old Enough";
+        document.getElementById('demo').innerHTML = `According to your age: You are "${voteActive}" to vote.`;
+        
+        // Nullish Operator ??
+        let name = 2;
+        let text = "missing";
+        let result = (name) ?? text;
+        console.log(result);
+
+        //Optional Chaining Operator ?.
+        const car = {type:"Fiat", model:"500", color:"white"};
+        document.getElementById('demo').innerHTML = car?.name;
+        
+    </script>
+</body>
+</html>

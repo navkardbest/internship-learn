@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <!-- <h1 onclick="this.innerHTML = 'Oops'">This is a basic JS Custom Snippet</h1> -->
+    <!-- <h1 onclick="changeText(this)">Click on this</h1>
+   <button onclick="displayDate()">Try it</button>
+   <button id="bjs">Access me via JS</button> -->
+   <p id="demo"></p>
+
+   Enter your name: <input type="text" name="fname" id="fname" oninput="upperCase()">
+   Enter password: <input type="text" name="pass" id="pass" onchange="pass()">
+    
+    <script>
+        // function changeText(id){
+        //     id.innerHTML = "Oops";
+        // }
+
+        // document.getElementById('bjs').onclick = "changeText(this)";
+
+        // function checkCookies(){
+        //     let txt = "";
+        //     if(navigator.cookieEnabled == true){
+        //         txt = "Cookies are enabled";
+        //     } else {
+        //         txt = "Cookies are not enabled";
+        //     }
+        //     document.getElementById('demo').innerHTML = txt;
+        // }
+
+        function upperCase(){
+            const x = document.getElementById('fname');
+            x.value = x.value.toUpperCase();
+        }
+
+        function pass(){
+            const x = document.getElementById('pass');
+            x.value = x.value.toUpperCase();
+        }
+        
+
+
+    </script>
+</body>
+</html>

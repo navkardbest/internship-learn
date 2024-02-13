@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+    
+    <script>
+        const lettersSet = new Set(["a","b","c"]);
+        lettersSet.add("d");
+        lettersSet.add("e");
+        lettersSet.add("f");
+
+        const a = "g";
+        const b = "h";
+
+        lettersSet.add(a);
+        lettersSet.add(b);
+
+        lettersSet.add("a");
+        lettersSet.add("a");
+        lettersSet.add("a");
+
+        let text = "";
+        for(const x of lettersSet.values()){
+            text += x;
+        }
+        document.getElementById('demo').innerHTML = text;
+        
+    </script>
+</body>
+</html>

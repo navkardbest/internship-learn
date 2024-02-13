@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1>This is a basic JS Custom Snippet</h1>
+    <p id="demo"></p>
+
+    <script>
+        // Q1 - Sol1
+        const colors = ["red", "blue", "green", "yellow"];
+        console.log(Array.isArray(colors));
+
+        // Q2 - Sol2
+        const gender = ["male", "female", "none"];
+        const realGender = gender.map((values) => {
+            return values;
+        });
+        console.log(gender, realGender);
+
+        // Q3 - Sol3
+        var first = (array, n) => {
+            if (array == null) return void 0;
+            if (n < 0) return [];
+            return array.slice(0, n);
+        }
+        console.log(first([7, 9, 0, -2]));
+        console.log(first([], 3));
+        console.log(first([7, 9, 0, -2], 3));
+        console.log(first([7, 9, 0, -2], 6));
+        console.log(first([7, 9, 0, -2], -3));
+
+        // Q4 - Sol4
+        var last = function (array, n) {
+            if (array == null)
+                return void 0;
+            if (n == null)
+                return array[array.length - 1];
+            return array.slice(Math.max(array.length - n, 0));
+        };
+
+        console.log(last([7, 9, 0, -2]));
+        console.log(last([7, 9, 0, -2], 3));
+        console.log(last([7, 9, 0, -2], 6));
+
+        // Q5 - Sol5
+        const myColor = ["Red", "Green", "White", "Black"];
+        const myColorStr1 = myColor.toString();
+        const myColorStr2 = myColor.join(",");
+        const myColorStr3 = myColor.join("+");
+
+        console.log(myColorStr1);
+        console.log(myColorStr2);
+        console.log(myColorStr3);
+
+        // Q6 - Sol6
+        const inum = window.prompt("Enter the number");
+        const dnum = dashedNum(inum);
+
+        function dashedNum (values) {
+            
+        }
+    </script>
+</body>
+
+</html>
