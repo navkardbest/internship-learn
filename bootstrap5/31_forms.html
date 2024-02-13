@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!--Stacked Form-->
+    <div class="container mt-3">
+        <h2>Stacked Form</h2>
+        <form action="#">
+            <div class="my-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
+            </div>
+            <div class="mb-3">
+                <label for="pwd" class="form-label">Password:</label>
+                <input type="password" name="pswd" id="pwd" class="form-control">
+            </div>
+            <div class="form-check mb-3">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="remember">Remember Me
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <hr>
+
+    <!--Textarea-->
+    <div class="container mt-3">
+        <h2>Textarea</h2>
+        <p>Use the .form-control class to style textareas as well:</p>
+        <form action="#">
+            <div class="mb-3 mt-3">
+                <label for="comment">Comments:</label>
+                <textarea name="text" id="comment" cols="30" rows="10" class="form-control mt-2"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <hr>
+
+    <!--Inline Forms-->
+    <form action="#">
+        <div class="row align-items-center">
+            <div class="col">
+                <input type="text" name="email" class="form-control form-control-lg" placeholder="Enter email:">
+            </div>
+            <div class="col">
+                <input type="password" name="pswd" class="form-control form-control-sm" placeholder="Enter password:">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Normal Input">
+                <input type="text" class="form-control" placeholder="Disabled Input" disabled>
+                <input type="text" class="form-control" placeholder="Read Only Input" readonly>
+            </div>
+        </div>
+    </form>
+    <hr>
+
+    <!--Plain Text Input-->
+    <form action="#">
+        <input type="text" class="form-control-plaintext" placeholder="Plaintext Input">
+        <input type="text" class="form-control" placeholder="Normal Text Input">
+        <input type="color" class="form-control-color">
+    </form>
+    <hr>
+
+    <!--Select Menus-->
+    <select class="form-select form-select-sm" disabled>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+    </select>
+    <hr>
+
+    <!--Data Lists-->
+    <form action="#">
+        <label for="browser" class="form-label">Choose your browser from the list:</label>
+        <input class="form-control" list="browsers" name="browser" id="browser">
+        <datalist id="browsers">
+            <option value="Edge">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Brave">
+        </datalist>
+    </form>
+    <hr>
+
+    <!--Checkboxes-->
+    <div class="container my-3">
+        <h2>Checkboxes</h2>
+        <p>To style a checkbox, use a container element with a .form-check class, and add .form-check-label to labels,
+            and .form-check-input to the input with type="checkbox".</p>
+        <p>The form below contains three checkboxes. The first option is checked by default, and the last option is
+            disabled:</p>
+        <form action="#">
+            <div class="form-check">
+                <input type="checkbox" name="option1" id="check1" class="form-check-input" checked>
+                <label for="check1" class="form-check-label">Option 1</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="option2" id="check2" class="form-check-input">
+                <label for="check2" class="form-check-label">Option 2</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="option3" id="check3" class="form-check-input">
+                <label for="check3" class="form-check-label">Option 3</label>
+            </div>
+            <hr>
+            <div class="form-check">
+                <input type="radio" name="optradio" id="radio1" class="form-check-input">Option 1
+                <label for="radio1" class="form-check-label"></label>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="optradio" id="radio2" class="form-check-input">Option 2
+                <label for="radio2" class="form-check-label"></label>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="optradio" id="radio3" class="form-check-input">Option 3
+                <label for="radio3" class="form-check-label"></label>
+            </div>
+        </form>
+    </div>
+    <hr>
+
+    <!--Toggle Switch-->
+    <div class="conatiner my-3">
+        <h2>Toggle Switch</h2>
+        <p>Try to submit the form with and without toggling the switch.</p>
+        <form action="#">
+            <div class="form-check form-switch">
+                <input type="checkbox" name="darkmode" id="mySwitch" class="form-check-input" value="yes" checked>
+                <label for="mySwitch" class="form-check-label">Dark Mode</label>
+            </div>
+        </form>
+    </div>
+    <hr>
+
+    <!--Range-->
+    <div class="container my-3">
+        <h2>Custom Range</h2>
+        <p>To create a custom range menu, add the .form-range class to the input element with type="range":</p>
+        <form action="#">
+            <label for="customRange" class="form-label">Custom Range</label>
+            <input type="range" name="points" id="customRange" class="form-range" step="5" min="0" max="20">
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
+    <hr>
+
+    <!--Input Groups-->
+    <div class="container my-3">
+        <h3>Input Groups</h3>
+        <p>The .input-group class is a container to enhance an input by adding an icon, text or a button in front or
+            behind the input field as a "help text".</p>
+        <p>To style the specified help text, use the .input-group-text class:</p>
+        <form action="#">
+            <div class="input-group input-group-sm">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" placeholder="Username">
+            </div>
+            <div class="input-group mt-3">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
+                <span class="input-group-text">@gmail.com</span>
+                <span class="input-group-text">@yahoo.com</span>
+                <span class="input-group-text">@hotmail.com</span>
+                <span class="input-group-text">@outlook.com</span>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-text">
+                    <input type="checkbox">
+                </div>
+                <input type="text" class="form-control" placeholder="Some text">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-text">
+                    <input type="radio">
+                </div>
+                <input type="text" class="form-control" placeholder="Some text">
+            </div>
+        </form>
+    </div>
+    <hr>
+
+    <!--Input Group Buttons-->
+    <div class="container my-3">
+        <h2>Input Group Buttons</h2>
+        <form action="#">
+            <div class="input-group my-2">
+                <button type="button" class="btn btn-outline-primary">Basic Button</button>
+                <input type="text" class="form-control" placeholder="Some text">
+            </div>
+            <div class="input-group my-2">
+                <input type="text" class="form-control" placeholder="Search">
+                <button type="button" class="btn btn-success">Go</button>
+            </div>
+            <div class="input-group my-2">
+                <input type="text" class="form-control" placeholder="Something Clever">
+                <button type="button" class="btn btn-primary">Ok</button>
+                <button type="button" class="btn btn-danger">Cancel</button>
+            </div>
+            <div class="input-group my-3">
+                <button type="button" class="btn btn-primary dropdown-toggle"
+                    data-bs-toggle="dropdown">Dropdown</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">Link 1</a></li>
+                    <li><a href="#" class="dropdown-item">Link 2</a></li>
+                    <li><a href="#" class="dropdown-item">Link 3</a></li>
+                </ul>
+                <input type="text" class="form-control" placeholder="Username">
+            </div>
+        </form>
+    </div>
+    <hr>
+
+    <!--Floating Labels-->
+    <div class="container my-3">
+        <h3>Floating Labels / Animated Labels</h3>
+        <p>By default, when using labels, they normally appear on top of the input field:</p>
+        <form action="#">
+            <div class="form-floating my-3">
+                <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email">
+                <label for="email">Email</label>
+            </div>
+            <div class="form-floating my-3">
+                <input type="text" name="pswd" id="pwd" class="form-control" placeholder="Enter Password">
+                <label for="pwd">Password</label>
+            </div>
+            <div class="form-floating my-3">
+                <textarea class="form-control" id="comment" name="text" placeholder="Comment goes here"></textarea>
+                <label for="comment">Comments</label>
+            </div>
+            <div class="form-floating my-3">
+                <select name="select-list" id="sel1" class="form-select">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                <label for="sel1" class="form-label">Select One</label>
+            </div>
+        </form>
+    </div>
+    <hr>
+
+    <!--Form Validation-->
+    <div class="conatiner m-3">
+        <h3>Form Validation</h3>
+        <p>Try to submit the form.</p>
+        <form action="#">
+            <div class="my-3">
+                <label for="uname" class="form-label">Username:</label>
+                <input type="text" name="username" id="uname" class="form-control" placeholder="Enter username"
+                    required>
+                <div class="valid-feedback">Valid</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="my-3">
+                <label for="pwd" class="form-label">Password:</label>
+                <input type="password" name="pwsd" id="pwd" class="form-control" placeholder="Enter password" required>
+                <div class="valid-feedback">Valid</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="checkbox1" name="checkbox" required>
+                <label for="checkbox1" class="form-check-label">I agree the terms and conditions.</label>
+                <div class="valid-feedback">Valid</div>
+                <div class="invalid-feedback">Check this checkbox to continue</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
