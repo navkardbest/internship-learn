@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .inline {
+            display: inline;
+            /* the default for span */
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: yellow;
+        }
+
+        .inline-block {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: yellow;
+        }
+
+        .block {
+            display: block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="inline">
+        <h1>The display Property</h1>
+        <h2>display: inline</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Magni necessitatibus <span class="inline">cumque</span> <span class="inline">quo</span> explicabo est eum
+            aliquid
+            repudiandae earum beatae nulla sunt alias pariatur sequi, facere,
+            dignissimos quibusdam? Earum, necessitatibus veritatis!</p>
+    </div>
+
+    <div id="inline-block">
+        <h2>display: inline-block</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Magni necessitatibus <span class="inline-block">cumque</span> <span class="inline-block">quo</span>
+            explicabo est eum aliquid
+            repudiandae earum beatae nulla sunt alias pariatur sequi, facere,
+            dignissimos quibusdam? Earum, necessitatibus veritatis!</p>
+    </div>
+
+    <div id="block">
+        <h2>display: block</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Magni necessitatibus <span class="block">cumque</span> <span class="block">quo</span> explicabo est eum
+            aliquid
+            repudiandae earum beatae nulla sunt alias pariatur sequi, facere,
+            dignissimos quibusdam? Earum, necessitatibus veritatis!</p>
+    </div>
+
+</body>
+
+</html>

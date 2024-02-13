@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #boxes{position: relative;}
+        .black-box{
+            position: static;
+            z-index: 3;
+            height: 100px;
+            background-color: lightsalmon;
+        }
+        .gray-box{
+            position: absolute;
+            z-index: 2;
+            background: lightcyan;
+            height: 100px;
+            width: 70%;
+            left: 50px;
+            top: 20px;
+        }
+        .green-box{
+            position: absolute;
+            z-index: 1;
+            background: lightgreen;
+            width: 35%;
+            left: 270px;
+            top: -15px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Z-index Example</h1>
+    <p>Hello Everyone</p>
+
+    <div id="boxes">
+        <div class="black-box"></div>
+        <div class="gray-box"></div>
+        <div class="green-box"></div>
+    </div>
+</body>
+</html>

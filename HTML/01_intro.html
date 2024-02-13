@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+    <style>
+        table{
+            font-family: Roboto;
+            border-collapse: collapse;
+            width: auto;
+            border:5px solid white;
+            background-color: lightblue;
+            border-radius: 20px;
+        }
+
+        td, th{
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            border:5px solid white;
+            background-color: lightblue;
+            border-radius: 20px;
+        }
+
+        tr:nth-child(even){
+            background-color: #dddddd;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>HTML Table</h1>
+    <table>
+        <tr>
+            
+            <th colspan="2">Contract</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang	</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Ernst Handel	</td>
+            <td>Austria</td>
+        </tr>
+    </table>
+</body>
+</html>
+

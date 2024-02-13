@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* a[target] {
+            background-color: yellow; --> [attribute] selector
+        } */
+
+        table td{
+            background-color: red;
+        }
+        /* a[target="_blank"] {
+            background-color: yellow; --> [attribute = "value"] selector
+        } */
+
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+
+        }
+        a:visited{
+            
+        }
+        /* [title~="flower"] {
+            color: red;             ---> [attribute~="value"] Selector
+        } */
+
+        /* [class|="top"] {
+            background: yellow;
+        }
+
+        [class^="top"] {
+            background: yellow;
+        }
+
+        [class$="test"] {
+            background: yellow;
+        }
+
+        [class*="te"] {
+            background: yellow;
+        } */
+
+        /* input[type="text"] {
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+            background-color: yellow;
+        }                                   --> Styling Forms
+        input[type="button"] {
+            width: 120px;
+            margin-left: 35px;
+            display: block;
+        } */
+    </style>
+</head>
+
+<body>
+    <h2>CSS [attribute] Selector</h2>
+    <p>The links with a target attribute gets a yellow background:</p>
+
+    <a href="https://www.w3schools.com">w3schools.com</a>
+    <a href="http://www.disney.com" target="_blank">disney.com</a>
+    <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+    <img src="klematis.jpg" title="klematis flower" width="150" height="113">
+    <img src="img_flwr.gif" title="flower" width="224" height="162">
+    <img src="img_tree.gif" title="tree" width="200" height="358">
+
+    <h1 class="top-header">Welcome</h1>
+    <p class="top-text">Hello world!</p>
+    <p class="topcontent">Are you learning CSS?</p>
+    <div class="container">
+        <table>
+            <tr><td>Hello</td></tr>
+        </table>
+    </div>
+</body>
+
+</html>

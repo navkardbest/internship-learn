@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h2>HTML Forms</h2>
+    <hr>
+    <form action="action_page.php">
+        <label for="fname">First name</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Last name</label><br>
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>
+        On Click Submit button , the form-data will be sent to a page called
+        "/action_page.php."
+    </p><br>
+    <hr>
+    <p>Radio - Choose your favoutire Web language</p>
+    <form>
+        <input type="radio" id="html" name="fav_lang" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_lang1" value="CSS">
+        <label for="html">CSS</label><br>
+        <input type="radio" id="js" name="fav_lang2" value="JS">
+        <label for="html">JS</label><br>
+    </form>
+    <hr>
+
+    <p>Checkbox - Choose your vehicle type</p><br>
+    <form action="">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1">I have a bike</label><br>
+        <input type="checkbox" id="vehicle1" name="vehicle2" value="Car">
+        <label for="vehicle2">I have a car</label><br>
+        <input type="checkbox" id="vehicle1" name="vehicle3" value="Boat">
+        <label for="vehicle3">I have a boat</label><br>
+    </form>
+    <hr>
+
+    <p>Submit button , get method</p><br>
+    <form action="" target="_self" method="get">
+        <label for="fname">First name:</label><br>
+        <input type="checked" id="fname" name="fname" value=""><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value=""><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+
+    <p>Submit button , post method</p><br>
+    <form action="" target="_self" method="post">
+        <fieldset style="width: 20%;">
+            <legend>Personalia</legend>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="" required><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br>
+            <br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <hr>
+
+    <p>Drop-Down List</p>
+    <label for="cars">Choose a car: </label><br>
+    <select name="cars" id="cars" size="4"multiple >
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat" selected>Fiat</option>
+        <option value="audi">Audi</option>
+    </select>
+
+    <hr>
+    <p>textarea</p>
+    <textarea name="message" id="textarea" cols="30" rows="10"></textarea>
+
+    <hr>
+    <p>Button onclick gives alert message</p>
+    <button type="button" onclick="alert('Hello World')">Click Me</button>
+
+    <hr>
+    <h2>The datalist Element</h2>
+
+    <p>The datalist element specifies a list of pre-defined options for an input element.</p>
+
+    <form action="">
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    <input type="submit">
+    </form>
+
+    
+</body>
+</html>
